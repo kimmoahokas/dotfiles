@@ -1,0 +1,11 @@
+alias pms=/opt/pms/PMS.sh
+alias irc="nocorrect tmux a -t irssi"
+
+source /usr/bin/aws_zsh_completer.sh
+
+# Customize to your needs...
+export PATH=$PATH:/home/kimia/bin
+
+export WORKON_HOME=~/.virtualenws
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
+source /usr/bin/virtualenvwrapper.sh
