@@ -1,4 +1,14 @@
-#!/bin/sh
+#!/bin/bash
+
+# make bin folder if it does not exist
+[ ! -d $HOME/bin ]; then
+    mkdir -p $HOME/bin
+fi
+
+#link sublime text if needed
+[ ! -e $HOME/bin/subl -a -e "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ]; then
+    ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+fi
 
 # Install oh-my-zsh if needed
 if [ ! -d $HOME/.oh-my-zsh]; then
