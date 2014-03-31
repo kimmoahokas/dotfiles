@@ -1,6 +1,6 @@
 # KimiA Dotfiles #
 
-These are my configuration files for• various OS X and Linux hosts I use daily. For some applications there are general confgis (either at the top-level directory or as a tag) and then host-dependent parts that are included from general config (for example see tag-zsh and zshrc.local under host).
+These are my configuration files for• various OS X and Linux hosts I use daily. For some applications there are general configs (either at the top-level directory or as a tag) and then host-dependent parts that are included from general config (for example see tag-zsh and zshrc.local under host).
 
 ## Getting started ##
 
