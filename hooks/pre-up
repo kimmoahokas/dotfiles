@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Install oh-my-zsh if needed
+if [ ! -d $HOME/.oh-my-zsh]; then
+    echo "Installing oh-my-zsh..."
+    curl -L http://install.ohmyz.sh | sh
+fi

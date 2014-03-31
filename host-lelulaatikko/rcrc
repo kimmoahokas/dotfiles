@@ -1,3 +1,2 @@
 TAGS="zsh tmux rtorrent"
-DOTFILES_DIRS="~/.dotfiles"
 EXCLUDES="Readme.md"

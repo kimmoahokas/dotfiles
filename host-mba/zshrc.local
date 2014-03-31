@@ -1,0 +1,13 @@
+plugins=(git gitignore mosh sublime colored-man brew osx pip)
+
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin:$HOME/bin:/Applications/eclipse/android-sdk-macosx/platform-tools:/Applications/eclipse/android-sdk-macosx/tools
+
+# fix äö and such in tab completion
+setopt combiningchars
+
+alias ls='ls -G'
+alias ll='ls -l -G'
+alias la='ls -la -G'
+alias irc='ssh lelulaatikko -t tmux attach -t irssi'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
