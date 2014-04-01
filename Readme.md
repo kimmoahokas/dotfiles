@@ -5,18 +5,27 @@ These are my configuration files for• various OS X and Linux hosts I use daily
 ## Getting started ##
 
 1. Clone this repo: `git clone git@github.com:mr-kimia/dotfiles.git ~/.dotfiles`
-2. Install [rcm][]:
-    * On OS X first install [homebrew][], then [rcm][]:
+2. Install [rcm][rcm]:
+    * On OS X first install [Homebrew][homebrew], then [rcm][rcm]:
 
-            ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-            brew tap thoughtbot/formulae
-            brew install rcm
-
+        ```bash
+        ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+        brew tap thoughtbot/formulae
+        brew install rcm
+        ```
     * On other platforms see the home page
 3. Link the global and host-dependent dotfiles: `rcup -v -x Readme.md`
 4. If this is new host customize the .rcrc file and add the host-specific config: `mkrc -v -o .rcrc`
 5. Link plugin dotfiles (based on the rcrc): `rcup -v`
 
+## Tips ##
+
+* To add some config file to tag: `mkrc -t <tag_name> <file_name>`
+* To add host-specific config file: `mkrc -o <file_name>`
+* To list current config files: `lsrc -v`
+* Config folders work too
+* for more info see [rcm(7)][rcm-man]
+
 [homebrew]: http://brew.sh/ "Homebrew"
 [rcm]: http://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos "rcm"
-
+[rcm-man]: http://thoughtbot.github.io/rcm/rcm.7.html "rcm man page"
