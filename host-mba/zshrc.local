@@ -6,6 +6,7 @@ export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/Applications/eclipse/android-s
 setopt combiningchars
 
 alias irc='ssh lelulaatikko -t tmux attach -t irssi'
+alias skim='open -a Skim'
 
 #make sure that ~/.bin is in path and then link subl there
 # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
