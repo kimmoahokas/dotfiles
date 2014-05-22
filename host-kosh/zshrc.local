@@ -1,3 +1,8 @@
+#Admins have funny opinions on terminal behaviour, fix to normal
 bindkey "^[OD" backward-char
-bindkey "\eOC" forward-char
+bindkey "\eOd" backward-char
+bindkey "\e[1;5D" backward-char
 
+bindkey "\eOC" forward-char
+bindkey "\eOc" forward-char
+bindkey "\e[1;5C" forward-char
