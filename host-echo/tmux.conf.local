@@ -1,0 +1,12 @@
+# Default session
+#new -d -s irssi irssi
+#neww -d alpine
+new -n echo
+neww -d -n quebec
+neww -d -n romeo
+neww -d -n sierra
+neww -d -n tango
+neww -d -n uniform
+neww -d -n victor
+neww -d -n whiskey
+neww -d -n xray
