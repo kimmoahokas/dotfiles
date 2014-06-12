@@ -1,2 +1,3 @@
-TAGS="zsh tmux rtorrent git"
+TAGS="zsh tmux git rtorrent"
+#DOTFILES_DIRS="~/.dotfiles"
 EXCLUDES="Readme.md"
