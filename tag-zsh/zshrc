@@ -40,11 +40,18 @@ DISABLE_AUTO_TITLE="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+
+WORKON_HOME="~/virtualenv"
+DISABLE_VENV_CD=1
+if [[! -d $WORKON_HOME ]]; then
+    mkdir $WORKON_HOME
+fi
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Override this in zshrc.local
-plugins=(colored-man git gitignore)
+plugins=(colored-man git gitignore virtualenvwrapper)
 
 export EDITOR=nano
 export VISUAL=nano
