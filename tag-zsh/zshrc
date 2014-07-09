@@ -41,9 +41,10 @@ DISABLE_AUTO_TITLE="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 
-WORKON_HOME="~/virtualenv"
+WORKON_HOME="$HOME/virtualenv"
 DISABLE_VENV_CD=1
-if [[! -d $WORKON_HOME ]]; then
+if [[ ! -d $WORKON_HOME ]]; then
+    echo "Creating directory $WORKON_HOME"
     mkdir $WORKON_HOME
 fi
 
