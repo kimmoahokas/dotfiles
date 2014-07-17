@@ -57,13 +57,7 @@ plugins=(colored-man git gitignore virtualenvwrapper)
 export EDITOR=nano
 export VISUAL=nano
 
-if [[ -d $HOME/bin ]];then
-    PATH=$PATH:$HOME/bin
-fi
-# Add RVM to PATH for scripting
-if [[ -d $HOME/.rvm ]]; then
-    PATH=$PATH:$HOME/.rvm/bin
-fi
+# Do not set PATH here! do it in .zprofile!
 
 # Finally, source per-host config and oh-my-zsh
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
