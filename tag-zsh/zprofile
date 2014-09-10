@@ -1,5 +1,10 @@
+[[ -d "/opt/local/bin" ]] && PATH="$PATH:/opt/local/bin"
+[[ -d "/opt/local/sbin" ]] && PATH="$PATH:/opt/local/sbin"
+[[ -d "$HOME/bin" ]] && PATH="$PATH:$HOME/bin"
+[[ -d "$HOME/.cabal" ]] && PATH="$PATH:$HOME/.cabal/bin" && MANPATH="$MANPATH:$HOME/.cabal/share/man"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-[[ -d "$HOME/bin" ]] && PATH="$PATH:$HOME/bin"
+[[ -d "/Applications/eclipse/android-sdk-macosx" ]] && PATH="$PATH:/Applications/eclipse/android-sdk-macosx/platform-tools:/Applications/eclipse/android-sdk-macosx/tools"
 
-[[ -d "$HOME/.rvm/bin" ]] && PATH="$PATH:$HOME/.rvm/bin"
+[[ -f ~/.zprofile.local ]] && source ~/.zprofile.local

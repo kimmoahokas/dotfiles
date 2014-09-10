@@ -1,7 +1,5 @@
 plugins=(git gitignore mosh sublime colored-man brew osx pip virtualenvwrapper)
 
-export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/Applications/eclipse/android-sdk-macosx/platform-tools:/Applications/eclipse/android-sdk-macosx/tools
-
 # fix äö and such in tab completion
 setopt combiningchars
 
@@ -12,3 +10,4 @@ alias skim='open -a Skim'
 # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 EDITOR="subl -w"
 VISUAL="$EDITOR"
+
