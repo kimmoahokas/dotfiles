@@ -5,6 +5,6 @@
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-[[ -d "/Applications/eclipse/android-sdk-macosx" ]] && PATH="$PATH:/Applications/eclipse/android-sdk-macosx/platform-tools:/Applications/eclipse/android-sdk-macosx/tools"
+[[ -d "$HOME/Library/Android/sdk" ]] && PATH="$PATH:$HOME/Library/Android/sdk/platform-tools:$HOME/Library/Android/sdk/tools"
 
 [[ -f ~/.zprofile.local ]] && source ~/.zprofile.local
