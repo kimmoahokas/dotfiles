@@ -6,3 +6,5 @@ bindkey "\e[1;5D" backward-char
 bindkey "\eOC" forward-char
 bindkey "\eOc" forward-char
 bindkey "\e[1;5C" forward-char
+
+unsetopt ignoreeof
