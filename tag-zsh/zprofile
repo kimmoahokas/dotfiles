@@ -1,7 +1,10 @@
 [[ -d "/opt/local/bin" ]] && PATH="$PATH:/opt/local/bin"
 [[ -d "/opt/local/sbin" ]] && PATH="$PATH:/opt/local/sbin"
+[[ -d "/usr/local/sbin" ]] && PATH="$PATH:/usr/local/sbin"
 [[ -d "$HOME/bin" ]] && PATH="$PATH:$HOME/bin"
 [[ -d "$HOME/.cabal" ]] && PATH="$PATH:$HOME/.cabal/bin" && MANPATH="$MANPATH:$HOME/.cabal/share/man"
+
+
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
