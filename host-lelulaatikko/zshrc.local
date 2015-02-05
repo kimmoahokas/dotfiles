@@ -1,7 +1,7 @@
+plugins+=(aws)
+
 alias pms=/opt/pms/PMS.sh
 alias irc="nocorrect tmux a -t irssi"
-
-source /usr/bin/aws_zsh_completer.sh
 
 export WORKON_HOME=~/.virtualenv
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2

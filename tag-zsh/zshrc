@@ -52,7 +52,7 @@ fi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Override this in zshrc.local
-plugins=(colored-man git gitignore virtualenvwrapper)
+plugins=(colored-man git gitignore virtualenvwrapper pip)
 
 export EDITOR=nano
 export VISUAL=nano

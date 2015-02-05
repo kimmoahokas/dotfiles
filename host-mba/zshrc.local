@@ -1,4 +1,4 @@
-plugins=(git gitignore mosh sublime colored-man brew osx pip virtualenvwrapper)
+plugins+=(mosh sublime brew osx aws)
 
 # fix äö and such in tab completion
 setopt combiningchars

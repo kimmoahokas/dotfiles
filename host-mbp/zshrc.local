@@ -1,4 +1,4 @@
-plugins=(git gitignore mosh sublime colored-man brew osx pip)
+plugins=(mosh sublime brew osx)
 
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/Applications/eclipse/android-sdk-macosx/platform-tools:/Applications/eclipse/android-sdk-macosx/tools
 
