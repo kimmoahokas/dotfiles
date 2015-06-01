@@ -1,7 +1,5 @@
 plugins=(mosh sublime brew osx)
 
-export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/Applications/eclipse/android-sdk-macosx/platform-tools:/Applications/eclipse/android-sdk-macosx/tools
-
 # fix äö and such in tab completion
 setopt combiningchars
 
