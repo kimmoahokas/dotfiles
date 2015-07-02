@@ -1,0 +1,26 @@
+[user]
+	name = Kimmo Ahokas
+	email = kimmo.ahokas@futurice.com
+[core]
+	excludesfile = /Users/kaho/.gitignore_global
+	quotepath = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+#[credential]
+#	helper = osxkeychain
+[color]
+	ui = auto
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls-ignored = ls-files -o -i --exclude-standard
+[push]
+	default = matching
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[gitreview]
+	username = kimmo-ahokas

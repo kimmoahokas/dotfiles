@@ -1,5 +1,3 @@
-plugins+=(mosh sublime brew osx aws)
-
 # fix äö and such in tab completion
 setopt combiningchars
 
@@ -7,6 +5,5 @@ alias skim='open -a Skim'
 
 #make sure that ~/.bin is in path and then link subl there
 # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-EDITOR="subl -w"
-VISUAL="$EDITOR"
-
+export EDITOR="subl -w"
+export VISUAL="$EDITOR"

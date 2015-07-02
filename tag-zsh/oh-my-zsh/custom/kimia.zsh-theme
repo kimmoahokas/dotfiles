@@ -1,12 +1,10 @@
 prompt_context() {
-  local user=`whoami`
-
-  if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    echo "%{$fg[green]%}$user%{$fg[red]%}@%m "
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    echo "%{$fg[green]%}$USER%{$fg[red]%}@%m "
   fi
 }
 local host="$(prompt_context)"
-local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+local ret_status="%(?:%{$fg[green]%}:%{$fg[red]%})%1{➜%} "
 
 PROMPT='${host}%{$fg[cyan]%}%c $(git_prompt_info)${ret_status}%{$reset_color%}'
 

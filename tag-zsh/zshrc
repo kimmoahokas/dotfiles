@@ -54,9 +54,6 @@ fi
 # Override this in zshrc.local
 plugins=(colored-man git gitignore virtualenvwrapper pip)
 
-export EDITOR=nano
-export VISUAL=nano
-
 # Do not set PATH here! do it in .zprofile!
 
 # Finally, source per-host config and oh-my-zsh
