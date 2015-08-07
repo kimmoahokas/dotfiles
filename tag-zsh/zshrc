@@ -59,4 +59,3 @@ plugins=(colored-man git gitignore virtualenvwrapper pip)
 # Finally, source per-host config and oh-my-zsh
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 source $ZSH/oh-my-zsh.sh
-

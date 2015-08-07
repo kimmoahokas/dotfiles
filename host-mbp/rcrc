@@ -1,1 +1,3 @@
-/Users/kimia/.dotfiles/rcrc
+TAGS="zsh tmux git osx"
+#DOTFILES_DIRS="~/.dotfiles"
+EXCLUDES="Readme.md UTF8.terminal"

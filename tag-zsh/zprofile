@@ -5,11 +5,11 @@
 [[ -d "$HOME/Library/Python/2.7/bin" ]] && PATH="$PATH:$HOME/Library/Python/2.7/bin"
 [[ -d "$HOME/bin" ]] && PATH="$PATH:$HOME/bin"
 [[ -d "$HOME/.cabal" ]] && PATH="$PATH:$HOME/.cabal/bin" && MANPATH="$MANPATH:$HOME/.cabal/share/man"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
+[[ -d "$HOME/.rvm/bin" ]] && PATH="$PATH:$HOME/.rvm/bin"
+[[ -d "/usr/local/heroku/bin" ]] && PATH="$PATH:/usr/local/heroku/bin"
 [[ -d "$HOME/Library/Android/sdk" ]] && PATH="$PATH:$HOME/Library/Android/sdk/platform-tools:$HOME/Library/Android/sdk/tools"
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 [[ -f "$HOME/.zprofile.osx" ]] && source "$HOME/.zprofile.osx"
 [[ -f "$HOME/.zprofile.local" ]] && source "$HOME/.zprofile.local"
