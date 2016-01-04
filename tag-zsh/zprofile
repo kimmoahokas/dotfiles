@@ -1,15 +1,23 @@
 [[ -d "/opt/local/bin" ]] && PATH="$PATH:/opt/local/bin"
 [[ -d "/opt/local/sbin" ]] && PATH="$PATH:/opt/local/sbin"
 [[ -d "/usr/local/sbin" ]] && PATH="$PATH:/usr/local/sbin"
-[[ -d "$HOME/.local/bin" ]] && PATH="$PATH:$HOME/.local/bin"
-[[ -d "$HOME/Library/Python/2.7/bin" ]] && PATH="$PATH:$HOME/Library/Python/2.7/bin"
+
 [[ -d "$HOME/bin" ]] && PATH="$PATH:$HOME/bin"
-[[ -d "$HOME/.cabal" ]] && PATH="$PATH:$HOME/.cabal/bin" && MANPATH="$MANPATH:$HOME/.cabal/share/man"
+[[ -d "$HOME/.local/bin" ]] && PATH="$PATH:$HOME/.local/bin"
+
+[[ -d "$HOME/Library/Python/2.7/bin" ]] && PATH="$PATH:$HOME/Library/Python/2.7/bin"
+[[ -d "$HOME/Library/Python/3.5/bin" ]] && PATH="$PATH:$HOME/Library/Python/3.5/bin"
+[[ -d "$HOME/.cabal/bin" ]] && PATH="$PATH:$HOME/.cabal/bin" && MANPATH="$MANPATH:$HOME/.cabal/share/man"
+[[ -d "$HOME/Library/Haskell/bin" ]] && PATH="$PATH:$HOME/Library/Haskell/bin"
 [[ -d "$HOME/.rvm/bin" ]] && PATH="$PATH:$HOME/.rvm/bin"
 [[ -d "/usr/local/heroku/bin" ]] && PATH="$PATH:/usr/local/heroku/bin"
 [[ -d "$HOME/Library/Android/sdk" ]] && PATH="$PATH:$HOME/Library/Android/sdk/platform-tools:$HOME/Library/Android/sdk/tools"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+
+[[ -d "/usr/local/share/zsh-completions" ]] && fpath=($fpath /usr/local/share/zsh-completions)
+
 
 [[ -f "$HOME/.zprofile.osx" ]] && source "$HOME/.zprofile.osx"
 [[ -f "$HOME/.zprofile.local" ]] && source "$HOME/.zprofile.local"
