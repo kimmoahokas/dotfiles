@@ -6,7 +6,7 @@
 	quotepath = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -15,8 +15,18 @@
 [color]
 	ui = auto
 [alias]
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+# http://gggritso.com/human-git-aliases
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all --date-order
 	ls-ignored = ls-files -o -i --exclude-standard
+	branches = branch -a
+	tags = tag
+	stashes = stash list
+	unstage = reset -q HEAD --
+	discard = checkout --
+	precommit = diff --cached --diff-algorithm=minimal -w
+	uncommit = reset --mixed HEAD~
+	amend = commit --amend
+	nevermind = !git reset --hard HEAD && git clean -d -f
 [push]
 	default = matching
 [filter "media"]
