@@ -1,6 +1,7 @@
 [user]
 	name = Kimmo Ahokas
 	email = kimmo.ahokas@futurice.com
+	signkey = A5E83471
 [core]
 	excludesfile = /Users/kaho/.gitignore_global
 	quotepath = false
