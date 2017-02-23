@@ -5,6 +5,7 @@
 [core]
 	excludesfile = /Users/kaho/.gitignore_global
 	quotepath = false
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -37,3 +38,9 @@
 	username = kimmo-ahokas
 [commit]
 	template = /Users/kaho/.stCommitMsg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[interactive]
+	diffFilter = diff-highlight

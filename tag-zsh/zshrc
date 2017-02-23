@@ -53,7 +53,7 @@ fi
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Override this in zshrc.local
 
-plugins=(zsh-navigation-tools colored-man-pages colorize)
+plugins=(zsh-navigation-tools colored-man-pages colorize z)
 
 # Do not set PATH here! do it in .zprofile!
 
