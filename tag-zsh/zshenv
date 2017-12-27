@@ -1,0 +1,25 @@
+dirs=("/opt/local/bin"
+      "/opt/local/sbin"
+      "/usr/local/sbin"
+      "$HOME/bin"
+      "$HOME/.local/bin"
+      "$HOME/go/bin"
+      "$HOME/Library/Python/2.7/bin"
+      "$HOME/Library/Python/3.5/bin"
+      "$HOME/Library/Python/3.6/bin"
+      "$HOME/.cabal/bin"
+      "$HOME/Library/Haskell/bin"
+      "$HOME/.rvm/bin"
+      "$HOME/.rvm/scripts/rvm"
+      "/usr/local/heroku/bin"
+      "$HOME/Library/Android/sdk/platform-tools"
+      "$HOME/Library/Android/sdk/tools")
+
+# make sure path only contains unique elements
+typeset -U path
+
+for dir in $dirs; do
+    if [[ -d "$dir" ]]; then
+        path+=$dir
+    fi
+done
