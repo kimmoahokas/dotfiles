@@ -26,6 +26,11 @@ These are my configuration files for• various OS X and Linux hosts I use daily
 * Config folders work too
 * for more info see [rcm(7)][rcm-man]
 
+## Visual studio code settings ##
+
+Visual studio code settings can be synced using [Settings sync][settings-sync] plugin. Gist ID [47c7139abde6b27ce1114a06d80fe392](https://gist.github.com/kimmoahokas/47c7139abde6b27ce1114a06d80fe392)
+
 [homebrew]: http://brew.sh/ "Homebrew"
 [rcm]: http://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos "rcm"
 [rcm-man]: http://thoughtbot.github.io/rcm/rcm.7.html "rcm man page"
+[settings-sync]: https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync "Settings Sync
