@@ -33,4 +33,4 @@ Visual studio code settings can be synced using [Settings sync][settings-sync] p
 [homebrew]: http://brew.sh/ "Homebrew"
 [rcm]: http://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos "rcm"
 [rcm-man]: http://thoughtbot.github.io/rcm/rcm.7.html "rcm man page"
-[settings-sync]: https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync "Settings Sync
+[settings-sync]: https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync "Settings Sync"

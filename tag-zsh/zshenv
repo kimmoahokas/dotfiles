@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 dirs=("/opt/local/bin"
       "/opt/local/sbin"
       "/usr/local/sbin"
