@@ -29,6 +29,7 @@
 	uncommit = reset --mixed HEAD~
 	amend = commit --amend
 	nevermind = !git reset --hard HEAD && git clean -d -f
+	clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
 [push]
 	default = current
 [filter "media"]
@@ -42,5 +43,6 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [interactive]
 	diffFilter = diff-highlight
