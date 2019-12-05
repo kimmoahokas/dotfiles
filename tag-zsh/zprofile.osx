@@ -7,12 +7,9 @@ export LC_MONETARY="fi_FI.UTF-8"
 # fix äö and such in tab completion
 setopt combiningchars
 
-alias skim='open -a Skim'
 alias fingerprint="ssh-keygen -E md5 -lf"
 alias cpkey='cat $HOME/.ssh/id_rsa.pub|pbcopy; echo "SSH key copied to clipboard!'
 
-#make sure that ~/.bin is in path and then link subl there
-# ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 export EDITOR="code -w"
 export VISUAL="$EDITOR"
 

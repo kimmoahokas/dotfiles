@@ -53,10 +53,22 @@ fi
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Override this in zshrc.local
 
-plugins=(zsh-navigation-tools colored-man-pages colorize z)
+plugins=(
+    zsh-navigation-tools
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    colored-man-pages
+    colorize
+    z
+    git
+    gitignore
+)
 
 # Do not set PATH here! do it in .zprofile!
 
 # Finally, source per-host config and oh-my-zsh
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 source $ZSH/oh-my-zsh.sh
+
+# added by travis gem
+[ -f /Users/kaho/.travis/travis.sh ] && source /Users/kaho/.travis/travis.sh
