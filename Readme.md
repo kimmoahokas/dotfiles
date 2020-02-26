@@ -4,7 +4,7 @@ These are my configuration files for• various OS X and Linux hosts I use daily
 
 ## Getting started ##
 
-1. Clone this repo: `git clone git@github.com:mr-kimia/dotfiles.git ~/.dotfiles`
+1. Clone this repo: `git clone git@github.com:kimmoahokas/dotfiles.git ~/.dotfiles`
 2. Install [rcm][rcm]:
     * On OS X first install [Homebrew][homebrew], then [rcm][rcm]:
 
@@ -13,10 +13,20 @@ These are my configuration files for• various OS X and Linux hosts I use daily
         brew tap thoughtbot/formulae
         brew install rcm
         ```
+
     * On other platforms see the home page
-3. Link the global and host-dependent dotfiles: `rcup -v -x Readme.md`
+3. Link the global and host-dependent dotfiles: `rcup -v -x Readme.md [-B hostname]`
 4. If this is new host customize the .rcrc file and add the host-specific config: `mkrc -v -o .rcrc`
 5. Link plugin dotfiles (based on the rcrc): `rcup -v`
+6. Change shell to zsh: `chsh -s /bin/zsh`
+7. Logout and log in again for all changes to take effect
+8. Install missing zsh plugins
+
+    ```bash
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    ```
+
 
 ## Tips ##
 
