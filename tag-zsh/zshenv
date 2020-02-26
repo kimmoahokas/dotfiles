@@ -14,7 +14,8 @@ dirs=("/opt/local/bin"
       "$HOME/.rvm/bin"
       "$HOME/.rvm/scripts/rvm"
       "$HOME/Library/Android/sdk/platform-tools"
-      "$HOME/Library/Android/sdk/tools")
+      "$HOME/Library/Android/sdk/tools"
+      "$HOME/.dotnet/tools")
 
 # make sure path only contains unique elements
 typeset -U path
