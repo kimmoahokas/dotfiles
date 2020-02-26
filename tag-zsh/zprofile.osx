@@ -8,7 +8,6 @@ export LC_MONETARY="fi_FI.UTF-8"
 setopt combiningchars
 
 alias fingerprint="ssh-keygen -E md5 -lf"
-alias cpkey='cat $HOME/.ssh/id_rsa.pub|pbcopy; echo "SSH key copied to clipboard!'
 
 export EDITOR="code -w"
 export VISUAL="$EDITOR"
