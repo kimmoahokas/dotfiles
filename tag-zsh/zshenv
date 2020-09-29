@@ -25,3 +25,10 @@ for dir in $dirs; do
         path+=$dir
     fi
 done
+
+function tabtitle() {
+    printf '\e]1;%s\a' "$*"
+}
+function wintitle() {
+    printf '\e]0;%s\a' "$*"
+}

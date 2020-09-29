@@ -61,14 +61,12 @@ plugins=(
     colorize
     z
     git
-    gitignore
 )
 
 # Do not set PATH here! do it in .zprofile!
 
-# Finally, source per-host config and oh-my-zsh
+# source per-host config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-source $ZSH/oh-my-zsh.sh
 
-# added by travis gem
-[ -f /Users/kaho/.travis/travis.sh ] && source /Users/kaho/.travis/travis.sh
+# Load oh-my-zsh
+source $ZSH/oh-my-zsh.sh

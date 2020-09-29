@@ -30,6 +30,7 @@
 	amend = commit --amend
 	nevermind = !git reset --hard HEAD && git clean -d -f
 	clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
+	pushf = push --force-with-lease
 [push]
 	default = current
 [filter "media"]
