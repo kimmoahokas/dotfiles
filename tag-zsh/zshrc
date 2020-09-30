@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="kimia"
-DEFAULT_USER="kaho"
+DEFAULT_USER="kimmo.ahokas@futurice.com"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -40,7 +40,7 @@ DISABLE_AUTO_TITLE="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-
+VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 WORKON_HOME="$HOME/virtualenv"
 DISABLE_VENV_CD=1
 if [[ ! -d $WORKON_HOME ]]; then
@@ -61,6 +61,13 @@ plugins=(
     colorize
     z
     git
+    virtualenvwrapper
+    docker
+    terraform
+    kubectl
+    python
+    aws
+    osx
 )
 
 # Do not set PATH here! do it in .zprofile!
