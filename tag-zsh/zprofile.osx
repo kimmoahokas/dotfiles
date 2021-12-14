@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Set proper locale variables
 export LANG="en_US.UTF-8"
 export LC_TIME="fi_FI.UTF-8"
@@ -8,7 +10,14 @@ export LC_MONETARY="fi_FI.UTF-8"
 setopt combiningchars
 
 alias fingerprint="ssh-keygen -E md5 -lf"
+alias rmDS='find . \( -name ".DS_Store" -o -name "._.DS_Store" \) -exec rm -vr {} \;'
 
 export EDITOR="code -w"
 export VISUAL="$EDITOR"
 
+function tabtitle() {
+    printf '\e]1;%s\a' "$*"
+}
+function wintitle() {
+    printf '\e]0;%s\a' "$*"
+}

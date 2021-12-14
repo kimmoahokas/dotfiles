@@ -1,6 +1,6 @@
 [user]
 	name = Kimmo Ahokas
-	email = kimmo.ahokas@futurice.com
+	email = kimmo.ahokas@gmail.com
 	signkey = A5E83471
 [core]
 	excludesfile = /Users/kimmo.ahokas@futurice.com/.gitignore_global
@@ -31,6 +31,8 @@
 	nevermind = !git reset --hard HEAD && git clean -d -f
 	clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
 	pushf = push --force-with-lease
+	fop = fetch origin --prune
+	last = log -1 HEAD
 [push]
 	default = current
 [filter "media"]
@@ -38,8 +40,6 @@
 	smudge = git-media-smudge %f
 [gitreview]
 	username = kimmo-ahokas
-[commit]
-	template = /Users/kaho/.stCommitMsg
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -53,3 +53,9 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/kimmo.ahokas@futurice.com/.stCommitMsg
+[includeIf "gitdir:~/repos/clients/solibri/"]
+	path = ~/repos/clients/solibri/gitconfig-solibri
+[pull]
+	ff = only
