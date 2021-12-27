@@ -61,13 +61,12 @@ plugins=(
     colorize
     z
     git
-    virtualenvwrapper
     docker
     terraform
-    kubectl
     python
     aws
     osx
+    pyenv
 )
 
 # Do not set PATH here! do it in .zprofile!
