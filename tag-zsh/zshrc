@@ -5,14 +5,12 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="kimia"
 DEFAULT_USER="kimmo.ahokas@futurice.com"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias rmDS='find . \( -name ".DS_Store" -o -name "._.DS_Store" \) -exec rm -vr {} \;'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -40,18 +38,21 @@ DISABLE_AUTO_TITLE="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-WORKON_HOME="$HOME/virtualenv"
-DISABLE_VENV_CD=1
-if [[ ! -d $WORKON_HOME ]]; then
-    echo "Creating directory $WORKON_HOME"
-    mkdir $WORKON_HOME
-fi
+# VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+#WORKON_HOME="$HOME/virtualenv"
+#DISABLE_VENV_CD=1
+#if [[ ! -d $WORKON_HOME ]]; then
+#    echo "Creating directory $WORKON_HOME"
+#    mkdir $WORKON_HOME
+#fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Override this in zshrc.local
+
+# make sure plugins only contains unique elements
+typeset -U plugins
 
 plugins=(
     zsh-navigation-tools
@@ -61,18 +62,23 @@ plugins=(
     colorize
     z
     git
-    docker
-    terraform
-    python
-    aws
-    osx
     pyenv
 )
 
-# Do not set PATH here! do it in .zprofile!
+# Add homebrew completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
 
 # source per-host config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-# Load oh-my-zsh
+# Load oh-my-zsh. This should be the last thing here
 source $ZSH/oh-my-zsh.sh
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
