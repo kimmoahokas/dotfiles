@@ -6,7 +6,8 @@ These are my configuration files for• various OS X and Linux hosts I use daily
 
 1. Clone this repo: `git clone git@github.com:kimmoahokas/dotfiles.git ~/.dotfiles`
 2. Install [zgenom](https://github.com/jandamm/zgenom): `git clone https://github.com/jandamm/zgenom.git "${HOME}/.zgenom"`
-3. Install [rcm][rcm]:
+3. Install [MesloNSG fonts](https://github.com/romkatv/powerlevel10k#manual-font-installation).
+4. Install [rcm][rcm]:
     * On OS X first install [Homebrew][homebrew], then [rcm][rcm]:
 
         ```bash
@@ -16,11 +17,11 @@ These are my configuration files for• various OS X and Linux hosts I use daily
         ```
 
     * On other platforms see the home page
-4. Link the global and host-dependent dotfiles: `rcup -v -x Readme.md [-B hostname]`
-5. If this is new host customize the .rcrc file and add the host-specific config: `mkrc -v -o .rcrc`
-6. Link plugin dotfiles (based on the rcrc): `rcup -v`
-7. Change shell to zsh: `chsh -s /bin/zsh`
-8. Logout and log in again for all changes to take effect
+5. Link the global and host-dependent dotfiles: `rcup -v -x Readme.md [-B hostname]`
+6. If this is new host customize the .rcrc file and add the host-specific config: `mkrc -v -o .rcrc`
+7. Link plugin dotfiles (based on the rcrc): `rcup -v`
+8. Change shell to zsh: `chsh -s /bin/zsh`
+9. Logout and log in again for all changes to take effect
 
 ## Tips ##
 
