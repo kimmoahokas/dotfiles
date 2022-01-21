@@ -4,14 +4,3 @@
 if [ ! -d $HOME/bin ]; then
     mkdir -p $HOME/bin
 fi
-
-#link sublime text if needed
-if [ ! -e $HOME/bin/subl ] && [ -e "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ]; then
-    ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" $HOME/bin/subl
-fi
-
-# Install oh-my-zsh if needed
-if [ ! -d $HOME/.oh-my-zsh ]; then
-    echo "Installing oh-my-zsh..."
-    curl -L http://install.ohmyz.sh | sh
-fi
