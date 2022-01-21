@@ -1,0 +1,3 @@
+TAGS="zsh"
+#DOTFILES_DIRS="~/.dotfiles"
+EXCLUDES="Readme.md"

@@ -5,7 +5,8 @@ These are my configuration files for• various OS X and Linux hosts I use daily
 ## Getting started ##
 
 1. Clone this repo: `git clone git@github.com:kimmoahokas/dotfiles.git ~/.dotfiles`
-2. Install [rcm][rcm]:
+2. Install [zgenom](https://github.com/jandamm/zgenom): `git clone https://github.com/jandamm/zgenom.git "${HOME}/.zgenom"`
+3. Install [rcm][rcm]:
     * On OS X first install [Homebrew][homebrew], then [rcm][rcm]:
 
         ```bash
@@ -15,18 +16,11 @@ These are my configuration files for• various OS X and Linux hosts I use daily
         ```
 
     * On other platforms see the home page
-3. Link the global and host-dependent dotfiles: `rcup -v -x Readme.md [-B hostname]`
-4. If this is new host customize the .rcrc file and add the host-specific config: `mkrc -v -o .rcrc`
-5. Link plugin dotfiles (based on the rcrc): `rcup -v`
-6. Change shell to zsh: `chsh -s /bin/zsh`
-7. Logout and log in again for all changes to take effect
-8. Install missing zsh plugins
-
-    ```bash
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    ```
-
+4. Link the global and host-dependent dotfiles: `rcup -v -x Readme.md [-B hostname]`
+5. If this is new host customize the .rcrc file and add the host-specific config: `mkrc -v -o .rcrc`
+6. Link plugin dotfiles (based on the rcrc): `rcup -v`
+7. Change shell to zsh: `chsh -s /bin/zsh`
+8. Logout and log in again for all changes to take effect
 
 ## Tips ##
 
@@ -38,7 +32,7 @@ These are my configuration files for• various OS X and Linux hosts I use daily
 
 ## Visual studio code settings ##
 
-Visual studio code settings can be synced using [Settings sync][settings-sync] plugin. Gist ID [47c7139abde6b27ce1114a06d80fe392](https://gist.github.com/kimmoahokas/47c7139abde6b27ce1114a06d80fe392)
+Visual studio code settings can be synced using [Settings sync][settings-sync] plugin.
 
 [homebrew]: http://brew.sh/ "Homebrew"
 [rcm]: http://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos "rcm"
