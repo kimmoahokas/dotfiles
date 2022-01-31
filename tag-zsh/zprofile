@@ -1,1 +1,4 @@
-eval "$(brew shellenv)"
+# Brew is in different location depending on M1/Intel
+if [[ -f "/opt/homebrew/bin/brew" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi

@@ -48,11 +48,6 @@ if ! zgenom saved; then
     # zgenom ohmyzsh themes/arrow
     zgenom load romkatv/powerlevel10k powerlevel10k
 
-    # Add homebrew completions
-    if type brew &>/dev/null; then
-        FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-    fi
-
     # save all to init script
     zgenom save
 
@@ -81,3 +76,9 @@ alias ls='ls -G --color=auto'
 
 # load local .zshrc customizations
 [[ ! -f ~/.zshrc.local ]] || source ~/.zshrc.local
+
+# Add homebrew completions
+# this does not work inside  zgenom save block
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
