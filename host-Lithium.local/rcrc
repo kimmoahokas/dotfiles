@@ -1,3 +1,5 @@
+HOSTNAME="Lithium.local"
+
 TAGS="zsh tmux git osx"
 #DOTFILES_DIRS="~/.dotfiles"
-EXCLUDES="Readme.md UTF8.terminal"
+EXCLUDES="Readme.md workspace.code-workspace"
