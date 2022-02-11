@@ -1,3 +1,5 @@
-TAGS="zsh"
+HOSTNAME="Sanoma"
+
+TAGS="zsh vim"
 #DOTFILES_DIRS="~/.dotfiles"
 EXCLUDES="Readme.md"

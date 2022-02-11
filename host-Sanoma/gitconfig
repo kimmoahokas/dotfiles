@@ -1,0 +1,13 @@
+[user]
+	email = kimmo.ahokas@sanoma.com
+    name = Kimmo Ahokas
+[core]
+	excludesfile = ~/.gitignore_global
+    quotepath = false
+[color]
+	ui = auto
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls-ignored = ls-files -o -i --exclude-standard
+[push]
+	default = matching
