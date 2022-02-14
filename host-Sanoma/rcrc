@@ -2,4 +2,4 @@ HOSTNAME="Sanoma"
 
 TAGS="zsh vim"
 #DOTFILES_DIRS="~/.dotfiles"
-EXCLUDES="Readme.md"
+EXCLUDES="Readme.md workspace.code-workspace"
