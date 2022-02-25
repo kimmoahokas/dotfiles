@@ -40,7 +40,6 @@ if ! zgenom saved; then
     # https://github.com/zsh-users/zsh-history-substring-search
     zgenom load zsh-users/zsh-history-substring-search
 
-
     # https://github.com/rupa/z
     zgenom load rupa/z
 
@@ -91,11 +90,11 @@ export NVM_DIR="$HOME/.nvm"
 export NODE_VERSIONS="/Users/kahokas/.nvm/versions/node"
 export NODE_VERSION_PREFIX="v"
 if type direnv &>/dev/null; then
-   eval "$(direnv hook zsh)"
+    eval "$(direnv hook zsh)"
 fi
 
 jdk() {
-        version=$1
-        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
-        java -version
- }
+    version=$1
+    export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+    java -version
+}
