@@ -44,7 +44,6 @@ if ! zgenom saved; then
     zgenom load rupa/z
 
     # theme
-    # zgenom ohmyzsh themes/arrow
     zgenom load romkatv/powerlevel10k powerlevel10k
 
     # save all to init script
@@ -69,6 +68,8 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 alias ls='ls -G --color=auto'
+alias ipv6_on='networksetup -setv6automatic "Wi-Fi"'
+alias ipv6_off='networksetup -setv6off "Wi-Fi"'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -81,6 +82,7 @@ alias ls='ls -G --color=auto'
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
+autoload bashcompinit && bashcompinit
 
 eval "$(op completion zsh)"; compdef _op op
 
