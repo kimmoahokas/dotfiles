@@ -5,6 +5,12 @@
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
 
+# Add homebrew completions
+# This needs to be done befor calling compinit, so before loading zgenom
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 # load zgenom https://github.com/jandamm/zgenom
 source "${HOME}/.zgenom/zgenom.zsh"
 
@@ -77,13 +83,8 @@ alias ipv6_off='networksetup -setv6off "Wi-Fi"'
 # load local .zshrc customizations
 [[ ! -f ~/.zshrc.local ]] || source ~/.zshrc.local
 
-# Add homebrew completions
-# this does not work inside  zgenom save block
-if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
+# Some special completions
 autoload bashcompinit && bashcompinit
-
 eval "$(op completion zsh)"; compdef _op op
 
 # NVM
