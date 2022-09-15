@@ -1,8 +1,9 @@
 [user]
 	email = kimmo.ahokas@sanoma.com
 	name = Kimmo Ahokas
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICPRF8Qut8+N2cu0YoljiAfCb5oHIPhP3JtoRDZ4NmCG
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/kahokas/.gitignore_global
 	quotepath = false
 	editor = code --wait
 [color]
@@ -18,8 +19,13 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[merge]
+  tool = code
+[mergetool "code"]
+  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 [commit]
 	template = /Users/kahokas/.stCommitMsg
+	gpgsign = true
 [alias]
 	fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
 [filter "lfs"]
@@ -27,3 +33,7 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
