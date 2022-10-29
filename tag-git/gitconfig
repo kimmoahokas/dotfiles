@@ -1,27 +1,41 @@
 [user]
 	name = Kimmo Ahokas
 	email = kimmo.ahokas@gmail.com
-    signkey = 87B03479
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOx8B7Ky/zdWjEep9l7ALesKqvTL9TveVLr0jr4MdCBe
 [core]
 	excludesfile = ~/.gitignore_global
 	quotepath = false
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-#[credential]
-#	helper = osxkeychain
+	editor = code --wait
 [color]
 	ui = auto
 [alias]
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls-ignored = ls-files -o -i --exclude-standard
 [push]
-	default = matching
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
-[gitreview]
-	username = kimmo-ahokas
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge]
+  tool = code
+[mergetool "code"]
+  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+[commit]
+	template = /Users/kahokas/.stCommitMsg
+	gpgsign = true
+[alias]
+	fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[commit]
+  gpgsign = true
